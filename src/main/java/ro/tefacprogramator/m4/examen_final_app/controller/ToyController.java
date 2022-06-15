@@ -34,6 +34,7 @@ public class ToyController {
         return result;
     }
 
+    @CrossOrigin
     @GetMapping("/toy/getAll")
     public List<Toy> getAllToys() {
 

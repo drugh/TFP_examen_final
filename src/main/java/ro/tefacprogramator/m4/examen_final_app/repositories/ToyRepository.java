@@ -10,7 +10,7 @@ import ro.tefacprogramator.m4.examen_final_app.entity.Toy;
 public interface ToyRepository extends JpaRepository<Toy, Integer> {
     
     @Query(
-        value = "SELECT ToyID, Description, Price, TypeName, CategoryName FROM toy t LEFT JOIN category c ON t.CategoryID = c.CategoryID LEFT JOIN type ty ON t.TypeID = ty.TypeID;",
+        value = "SELECT * FROM toysdb.toy t LEFT JOIN toysdb.category c ON t.CategoryID = c.CategoryID LEFT JOIN toysdb.type ty ON t.TypeID = ty.TypeID;",
         nativeQuery = true
     )
     public List<Toy> lsitOfToys();
